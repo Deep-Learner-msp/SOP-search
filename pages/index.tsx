@@ -164,8 +164,12 @@ export default function Home() {
     <>
       <Layout>
         <div className="mx-auto flex flex-col gap-4">
-          <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
+          {/*<h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
             SS DocuMagnet
+          </h1>*/}
+          <h1 className="text-3xl text-[#092e5d] font-medium" style={{ padding: '0.5rem 1rem',  marginTop: '2.8rem',
+    marginBottom: '-1rem' }}>
+            SS DocuMagnet: Discover the Boundless Potential of Generative AI
           </h1>
           <main className={styles.main}>
             <div className={styles.cloud}>
@@ -173,7 +177,7 @@ export default function Home() {
                 {chatMessages.map((message, index) => {
                   let icon;
                   let className;
-                  if (message.type === 'apiMessage') {
+                  if (message.type === "apiMessage") {
                     icon = (
                       <Image
                         src="/STT.svg"
@@ -281,8 +285,8 @@ export default function Home() {
                     name="userInput"
                     placeholder={
                       loading
-                        ? 'Waiting for response...'
-                        : 'Ask about best practices in SOP documents...?'
+                        ? "Waiting for response..."
+                        : "Ask about best practices in SOP documents...?"
                     }
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
